@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    char str[] = "Embedded";
+    int start = 0;
+    int end = 0;
+    char temp;
+
+    while (str[end] != '\0')
+    {
+        end++;
+    }
+
+    end--;
+
+    while (start < end)
+    {
+        temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+
+        start++;
+        end--;
+    }
+
+    printf("%s\n", str);
+
+    return 0;
+}
